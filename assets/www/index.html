@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>ExerciseTracker</title>
+   
+  <script type="text/javascript" src="cordova-2.0.0.js"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCQxN3BWbBuj_ix4ifJf0O09OrIcPUV63A&sensor=false"></script>
+  <script type="text/javascript" src="json2.js"></script>
+  <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+  <script type="text/javascript" src="tracker.js"></script>
+  <link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" />
+   
+</head>
+<body">
+<div data-role="page" id="track">
+	<div data-role="navbar">
+	<ul>
+	<li><a href="#track" data-transition="flip" data-icon="plus">Track</a></li>
+	<li><a href="#settings" data-transition="flip" data-icon="grid">History</a></li>
+	</ul>
+	</div>
+	
+	<div data-role="content" style="padding: 0px;">
+	<div class="ui-grid-a">
+		<div class="ui-block-a"><button id="track-get-position" data-icon="refresh">Start</button></div>
+		<div class="ui-block-b"><button id="upload-track" data-icon="star">Upload</button></div>
+	</div>
+	<div id="track-map-container" style="position: absolute; bottom: 0; left:0;height: 70%; width: 100%;">
+	</div>
+	</div>
+</div>
+
+<div data-role="page" id="settings">
+	<div data-role="navbar">
+	<ul>
+	<li><a href="#track" data-transition="flip" data-icon="plus">Track</a></li>
+	<li><a href="#settings" data-transition="flip" data-icon="grid">History</a></li>
+	</ul>
+	</div>
+	
+	<div data-role="content">
+	<button id="network-button" data-icon="check">internet on</button>
+	<button id="seed-data" >load seed data</button>
+	</div>
+</div>
+
+</body>
+</html>
